@@ -24,7 +24,6 @@
 @synthesize delegate;
 
 @synthesize panGestureRecognizer;
-@synthesize information;
 @synthesize overlayView;
 
 - (id)initWithFrame:(CGRect)frame
@@ -34,12 +33,7 @@
         [self setupView];
         
 #warning placeholder stuff, replace with card-specific information {
-        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
-        information.text = @"no info given";
-        [information setTextAlignment:NSTextAlignmentCenter];
-        information.textColor = [UIColor blackColor];
-        
-        self.backgroundColor = [self colorWithHexString:@"E34F36"];
+        self.backgroundColor = [UIColor whiteColor];
 #warning placeholder stuff, replace with card-specific information }
         
         
@@ -47,7 +41,6 @@
         panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
         
         [self addGestureRecognizer:panGestureRecognizer];
-        [self addSubview:information];
         
         overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
         overlayView.alpha = 0;
