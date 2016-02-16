@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18634C3A1C72D59A00657E56 /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18634C351C72D59A00657E56 /* DraggableView.m */; };
+		18634C3B1C72D59A00657E56 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 18634C371C72D59A00657E56 /* DraggableViewBackground.m */; };
+		18634C3C1C72D59A00657E56 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18634C391C72D59A00657E56 /* OverlayView.m */; };
 		18DADA5A1C7213C7007869C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DADA591C7213C7007869C1 /* main.m */; };
 		18DADA5D1C7213C7007869C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DADA5C1C7213C7007869C1 /* AppDelegate.m */; };
 		18DADA601C7213C7007869C1 /* Verbat_Rajesh_Subramonian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18DADA5E1C7213C7007869C1 /* Verbat_Rajesh_Subramonian.xcdatamodeld */; };
@@ -28,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18634C341C72D59A00657E56 /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
+		18634C351C72D59A00657E56 /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
+		18634C361C72D59A00657E56 /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
+		18634C371C72D59A00657E56 /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
+		18634C381C72D59A00657E56 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		18634C391C72D59A00657E56 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 		18DADA541C7213C7007869C1 /* Verbat-Rajesh-Subramonian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Verbat-Rajesh-Subramonian.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DADA581C7213C7007869C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DADA591C7213C7007869C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +92,12 @@
 		18DADA561C7213C7007869C1 /* Verbat-Rajesh-Subramonian */ = {
 			isa = PBXGroup;
 			children = (
+				18634C341C72D59A00657E56 /* DraggableView.h */,
+				18634C351C72D59A00657E56 /* DraggableView.m */,
+				18634C361C72D59A00657E56 /* DraggableViewBackground.h */,
+				18634C371C72D59A00657E56 /* DraggableViewBackground.m */,
+				18634C381C72D59A00657E56 /* OverlayView.h */,
+				18634C391C72D59A00657E56 /* OverlayView.m */,
 				18DADA5B1C7213C7007869C1 /* AppDelegate.h */,
 				18DADA5C1C7213C7007869C1 /* AppDelegate.m */,
 				18DADA611C7213C7007869C1 /* ViewController.h */,
@@ -222,10 +237,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18634C3B1C72D59A00657E56 /* DraggableViewBackground.m in Sources */,
 				18DADA601C7213C7007869C1 /* Verbat_Rajesh_Subramonian.xcdatamodeld in Sources */,
+				18634C3C1C72D59A00657E56 /* OverlayView.m in Sources */,
 				18DADA5D1C7213C7007869C1 /* AppDelegate.m in Sources */,
 				18DADA631C7213C7007869C1 /* ViewController.m in Sources */,
 				18DADA5A1C7213C7007869C1 /* main.m in Sources */,
+				18634C3A1C72D59A00657E56 /* DraggableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +438,7 @@
 				18DADA7C1C7213C8007869C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18DADA7D1C7213C8007869C1 /* Build configuration list for PBXNativeTarget "Verbat-Rajesh-SubramonianTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +447,7 @@
 				18DADA7F1C7213C8007869C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
