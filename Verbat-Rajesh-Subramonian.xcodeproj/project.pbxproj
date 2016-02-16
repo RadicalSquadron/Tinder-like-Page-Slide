@@ -71,6 +71,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1865387B1C73044C0094ADB4 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				18634C341C72D59A00657E56 /* DraggableView.h */,
+				18634C351C72D59A00657E56 /* DraggableView.m */,
+				18634C361C72D59A00657E56 /* DraggableViewBackground.h */,
+				18634C371C72D59A00657E56 /* DraggableViewBackground.m */,
+				18634C381C72D59A00657E56 /* OverlayView.h */,
+				18634C391C72D59A00657E56 /* OverlayView.m */,
+			);
+			name = "Helper Files";
+			sourceTree = "<group>";
+		};
 		18DADA4B1C7213C7007869C1 = {
 			isa = PBXGroup;
 			children = (
@@ -92,12 +105,7 @@
 		18DADA561C7213C7007869C1 /* Verbat-Rajesh-Subramonian */ = {
 			isa = PBXGroup;
 			children = (
-				18634C341C72D59A00657E56 /* DraggableView.h */,
-				18634C351C72D59A00657E56 /* DraggableView.m */,
-				18634C361C72D59A00657E56 /* DraggableViewBackground.h */,
-				18634C371C72D59A00657E56 /* DraggableViewBackground.m */,
-				18634C381C72D59A00657E56 /* OverlayView.h */,
-				18634C391C72D59A00657E56 /* OverlayView.m */,
+				1865387B1C73044C0094ADB4 /* Helper Files */,
 				18DADA5B1C7213C7007869C1 /* AppDelegate.h */,
 				18DADA5C1C7213C7007869C1 /* AppDelegate.m */,
 				18DADA611C7213C7007869C1 /* ViewController.h */,
