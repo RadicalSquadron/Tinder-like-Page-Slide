@@ -1,10 +1,11 @@
 //
 //  DraggableViewBackground.m
-//  testing swiping
 //
-//  Created by Richard Kim on 8/23/14.
-//  Copyright (c) 2014 Richard Kim. All rights reserved.
+//  Verbat-Rajesh-Subramonian
 //
+//  Created by rajesh subramonian on 15/02/2016.
+//  Copyright (c) 2016 rajesh subramonian. All rights reserved.
+
 
 #import "DraggableViewBackground.h"
 
@@ -12,10 +13,6 @@
     NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
     NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
     
-    UIButton* menuButton;
-    UIButton* messageButton;
-    UIButton* checkButton;
-    UIButton* xButton;
 }
 //this makes it so only two cards are loaded at a time to
 //avoid performance and memory costs
@@ -32,7 +29,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
+        exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"last", nil]; //%%% placeholder for card-specific information
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
         cardsLoadedIndex = 0;
@@ -44,22 +41,17 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 //%%% sets up the extra buttons on the screen
 -(void)setupView
 {
-#warning customize all of this.  These are just place holders to make it look pretty
-    self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
-    menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
-    [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
-    messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
-    [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
-    xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
-    [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
-    [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
-    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
-    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:menuButton];
-    [self addSubview:messageButton];
-    [self addSubview:xButton];
-    [self addSubview:checkButton];
+    UIToolbar* toolbar = [[UIToolbar alloc] init];
+    toolbar.frame = CGRectMake(0, self.frame.size.height - 44, self.frame.size.width, 44);
+    UIBarButtonItem *rightSwipe = [[UIBarButtonItem alloc] initWithTitle:@"Right Swipe" style:UIBarButtonItemStylePlain target:self action:@selector(swipeRight)];
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *leftSwipe = [[UIBarButtonItem alloc] initWithTitle:@"Left Swipe" style:UIBarButtonItemStylePlain target:self action:@selector(swipeLeft)];
+    UIBarButtonItem *reloadbtn = [[UIBarButtonItem alloc] initWithTitle:@"Reload" style:UIBarButtonItemStylePlain target:self action:@selector(loadCards)];
+
+    NSArray *buttonItems = [NSArray arrayWithObjects:leftSwipe,flexibleSpace,reloadbtn,flexibleSpace,rightSwipe,nil];
+    [toolbar setItems:buttonItems];
+    [self addSubview:toolbar];
+
 }
 
 #warning include own card customization here!
@@ -145,7 +137,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 {
     DraggableView *dragView = [loadedCards firstObject];
     dragView.overlayView.mode = GGOverlayViewModeRight;
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         dragView.overlayView.alpha = 1;
     }];
     [dragView rightClickAction];
@@ -156,7 +148,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 {
     DraggableView *dragView = [loadedCards firstObject];
     dragView.overlayView.mode = GGOverlayViewModeLeft;
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         dragView.overlayView.alpha = 1;
     }];
     [dragView leftClickAction];

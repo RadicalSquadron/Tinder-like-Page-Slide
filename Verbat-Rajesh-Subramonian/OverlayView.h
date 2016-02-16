@@ -1,11 +1,11 @@
 //
 //  OverlayView.h
-//  testing swiping
 //
-//  Created by Richard Kim on 5/22/14.
-//  Copyright (c) 2014 Richard Kim. All rights reserved.
+//  Verbat-Rajesh-Subramonian
 //
-//  @cwRichardKim for updates and requests
+//  Created by rajesh subramonian on 15/02/2016.
+//  Copyright (c) 2016 rajesh subramonian. All rights reserved.
+//rdKim for updates and requests
 
 #import <UIKit/UIKit.h>
 
