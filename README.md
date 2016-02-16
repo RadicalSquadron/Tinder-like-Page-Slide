@@ -2,7 +2,7 @@
 
 The project contains animation of a view in accordance to swipe functionality.
 
-Initialy, the ViewController calls the UIView subclass, DraggableViewBackground.
+Initialy, the ViewController calls the UIView subclass, DraggableViewBackground
 
 - Where the view is laid out with a card shaped UIView in its heart and a tool bar is laid out with three buttons,
   Swipe-Left, Reload and Swipe-Right.
