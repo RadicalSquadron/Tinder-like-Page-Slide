@@ -1,4 +1,4 @@
-# Verbat-Rajesh-Subramonian-Interview
+# Tinder-like-Page-Slide
 
 The project contains animation of a view in accordance to swipe functionality.
 
